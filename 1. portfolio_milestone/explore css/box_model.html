@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        .box{
+            width: 300px;
+            border: 5px solid black;
+            /* height: 200px; */
+            margin: 30px;
+            padding: 30px;
+        }
+
+        .alternative{
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>My first blog</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque accusantium impedit harum sapiente commodi ea dicta voluptatem nihil mollitia et ducimus amet soluta cumque, aliquid nam blanditiis iusto quis modi perspiciatis. Error similique animi nesciunt tempore ratione nisi assumenda quod, fugit deleniti tempora vero sequi, sapiente adipisci ea tenetur itaque.</p>
+    </div>
+    <div class="box alternative">
+        <h1>My first blog</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque accusantium impedit harum sapiente commodi ea dicta voluptatem nihil mollitia et ducimus amet soluta cumque, aliquid nam blanditiis iusto quis modi perspiciatis. Error similique animi nesciunt tempore ratione nisi assumenda quod, fugit deleniti tempora vero sequi, sapiente adipisci ea tenetur itaque.</p>
+    </div>
+</body>
+</html>

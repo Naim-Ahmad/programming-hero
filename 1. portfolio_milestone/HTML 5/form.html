@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form HTML</title>
+    <style>
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        fieldset label{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Fill Up this form for hiring me</h1>
+        <form>
+            <label for="name"> Your Name: <br>
+                <input type="text" name="name" id="name" placeholder="Name">
+            </label>
+            <label for="email"> Your Email: <br>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </label>
+            <label for="phone">Your Phone: <br>
+                <input type="number" name="phone" id="phone" placeholder="Phone">
+            </label>
+            <fieldset>
+                <legend>Witch type of Site you want to create?</legend>
+                <label for="portfolio"> 
+                    <input type="radio" name="type" id="portfolio"> Portfolio
+                </label>
+                <label for="ecommarce">
+                    <input type="radio" name="type" id="ecommarce"> E Commerce
+                </label>
+                <label for="blog">
+                    <input type="radio" name="type" id="blog"> Blog
+                </label>
+                <label for="newsPaper">
+                    <input type="radio" name="type" id="newsPaper"> Online Newspaper
+                </label>
+            </fieldset>
+            <fieldset class="checkbox">
+                <legend>Witch Technology you want to use? </legend>
+                <label for="html">
+                    <input type="checkbox" name="html" id="html"> HTML
+                </label>
+                <label for="css">
+                    <input type="checkbox" name="css" id="css"> CSS
+                </label>
+                <label for="js">
+                    <input type="checkbox" name="js" id="js"> JavaScript
+                </label>
+                <label for="react">
+                    <input type="checkbox" name="react" id="react"> React
+                </label>
+                <label for="node">
+                    <input type="checkbox" name="node" id="node"> Node.js
+                </label>
+                <label for="express">
+                    <input type="checkbox" name="express" id="express"> Express.js
+                </label>
+                <label for="mongo">
+                    <input type="checkbox" name="mongo" id="mongo"> Mongo DB
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Give Me Details Instruction</legend>
+                <label for="Instruction">
+                    <textarea name="Instruction" id="Instruction" cols="30" rows="2" placeholder="Tell Your Idea Please!"></textarea>
+                </label>
+            </fieldset>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>

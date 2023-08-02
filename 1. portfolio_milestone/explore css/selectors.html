@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Css</title>
+    <style>
+        /* Attribute selectors */
+        input[type="text"]{
+            outline: none;
+            border: 1px solid rgba(20, 30, 40, 0.5);
+        }
+        input[value]{
+            color: gray;
+            background: #000;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+        }
+        /* grouping selectors */
+        h1, li {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* combinators selectors
+        ===descendant combinators===
+        Example: div span will match all <span> elements that are inside a <div> element. */
+        
+        div span {
+            color: blue;
+        }
+
+        /* child combinators 
+        Example: ul > li will match all <li> elements that are nested directly inside a <ul> element.
+        */
+        div > span {
+            color: green;
+        }
+
+        /* general sibling combinators */
+        p ~ button {
+            font-weight: bold;
+        }
+
+        /* adjacent sibling combinators 
+        Example: h2 + p will match the first <p> element that immediately follows an h2 element.
+        */
+        p + button {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Type of css</h1>
+    <ol>
+        <li>Inline</li>
+        <li>Internal </li>
+        <li>External</li>
+    </ol>
+    <form>
+        <input type="text" name="name" id="name">
+        <input type="text" name="username" id="username">
+        <input type="password" name="password" id="password">
+        <input type="submit" value="submit">
+    </form>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sequi beatae laudantium recusandae voluptatibus assumenda, quisquam similique itaque soluta eaque eos, libero deserunt <span>Lorem ipsum dolor sit amet.</span>eius provident totam impedit atque quod amet.
+        </p>
+        <span>read more</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aut culpa, ipsam ad vel quam consequuntur. Minima dolorum harum et mollitia quaerat nulla, dicta debitis. Id similique recusandae eveniet magnam laudantium. Ut quia tenetur velit placeat enim quae nemo facere, deserunt maiores suscipit harum atque dolore dolor voluptatibus minima perspiciatis?</p>
+        <button>click me</button>
+        <button>second bottom</button>
+       
+    </div>
+</body>
+</html>
