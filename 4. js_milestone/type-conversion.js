@@ -1,4 +1,4 @@
-console.log(true + false); // eta pari nai 
+console.log(true + false); // 1 + 0
 console.log(12 / '6') // output: 2 peresi
 console.log("number" + 15 + 3) // Output: number153 perechi
 console.log(15 + 3 + 'number'); // output: 18number perechi
@@ -15,3 +15,8 @@ console.log([1, 2, 3] === [1, 2, 3]); // output: false pari nai
 
 console.log({} + [] + {} + [1]); // output: [object Object][object Object]1 pari nai    
 console.log({} + [] + {} + [1]); // output: [object Object][object Object]1 pari nai
+
+console.log(NaN > null);
+
+console.log('true' == true);
+console.log(!!NaN);

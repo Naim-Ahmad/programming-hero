@@ -40,6 +40,52 @@ console.log(Boolean(NaN))
 console.log(Boolean(0))
 console.log(Boolean(-0))
 
+/** 
+ to number conversion
+ */
+// explicit conversion
+console.log('To number conversion');
+console.log(Number(null)); // 0
+console.log(Number(undefined)); // NaN
+console.log(Number(NaN)); // NaN
+console.log(Number('')); // 0
+console.log(Number('hello')); // NaN
+console.log(Number('\n')); // 0
+console.log(Number('123')); // 123
+console.log(Number(true)); // 1
+console.log(Number(false)); // 0
+/**
+ * implicit conversion ঘটে ৪ যায়গাতে। 
+ * 1. comparison operator (<, <=, >, >=)
+ * 2. bitwise operator (&, |, ^, ~ )
+ * 3. arithmetic operator (-, +, *, /, %) তবে binary + operator ইমপ্লিসিট কনভার্সন ঘটায় না। 
+ * 4. loosely equality operator (==, !=) তবে যদি অপারেন্ড স্ট্রিং হয় তাহলে কনভার্সন ঘটে না। 
+ * 
+ * তবে খেলাফে কিয়াস ২ টি যায়গা আছে যেখানে কনভার্সন ঘটে না 
+ * ১। null অথবা undefined কে যখন == দিয়ে চেক করা হয় যেমন null == ০ এখানে অউতপুট আসবে false, কারণ এখানে কনভার্সন ঘটেনি। 
+ * ২। null কখনো কার সমান হতে পারে না যেমন NaN == NaN এখানে অউতপুত আসবে false 
+*/
+console.log('Number implicit conversion');
+// equality operator
+console.log('Equality operator');
+console.log('3' > '1'); // true
+console.log('foo' >= 'bar');
+console.log();
+console.log();
+console.log();
+
+
+// arithmetic operator
+console.log('3' + '1'); // 31 ekhane concat hoye jabe conversion hobe na
+console.log('3' - '1');
+console.log(true + 3); // 4
+console.log(4 / false); // infinity
+console.log(2 * 2 + null); // 4
+console.log(2 * 2 + undefined); // NaN
+
+
+
+
 
 
 
