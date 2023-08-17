@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerText VS InnerContent Vs InnerHTML</title>
+    <style>
+        .body{
+            width: 60%;
+            margin: auto;
+            /* text-align: center; */
+        }
+    </style>
+</head>
+<body class="body">
+    <h1>InnerText VS TextContent Vs InnerHTML</h1>
+    <div class="parent">
+        Lorem ipsum, 
+            dolor sit <span>amet consectetur</span> adipisicing elit. Harum nihil 
+    </div>
+
+    <script>
+        const parent = document.querySelector('.parent')
+        // this property show browser text
+        console.log('innerText: ' , parent.innerText);
+        // these two properties shows the text which you write in the text editor
+        console.log('textContent: ' ,parent.textContent);
+        // and difference between this and textContent is textContent show only text without tag but innerHtml show tag also 
+        console.log('innerHTML: ' , parent.innerHTML);
+
+        // Example-2
+        const parentClone1 = parent.cloneNode();
+        const parentClone2 = parent.cloneNode();
+        const parentClone3 = parent.cloneNode();
+
+        // parentClone1.innerText = `Updated Text by 
+        
+
+
+        // <h2> innerText </h2> `
+
+        // parent.textContent = `Updated Text by 
+
+
+        // <h2> TextContent </h2>`
+        // parentClone3.innerHTML = `Updated Text by 
+
+
+
+        // <h2> innerHTML </h2>`
+
+        document.querySelector('body').appendChild(parentClone1)
+        document.querySelector('body').appendChild(parentClone2)
+        document.querySelector('body').appendChild(parentClone3)
+    </script>
+</body>
+</html>

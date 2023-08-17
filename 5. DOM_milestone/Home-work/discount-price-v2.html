@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30% Discount Price</title>
+    <style>
+        .main {
+            min-width: 400px;
+            max-width: 500px;
+            background-color: lightblue;
+            padding: 20px;
+            border-radius: 10px;
+            padding-bottom: 2rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button {
+            border: none;
+            padding: 10px 20px;
+            font-size: large;
+            border-radius: 8px;
+            font-weight: bold;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        #apply-btn {
+            background-color: slategray;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+
+        #coupon-field{
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: none;
+            padding: 5px 10px;
+            width: 5rem;
+        }
+
+        .total-price {
+            font-size: x-large;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <h1>Payment Details</h1>
+        <div class="payment-card">
+            <p class="total-price">Total Price : <span id="total-price">1000</span></p>
+            <div>
+                <label>Enter Coupon code for 30% Discount</label> <br>
+                <input type="text" id="coupon-field">
+                <button id="apply-btn">Apply</button> <br>
+            </div>
+            <button>Pay Now</button>
+        </div>
+    </main>
+
+    <script>
+        const applyBtn = document.getElementById('apply-btn');
+        const totalPriceElm = document.getElementById('total-price');
+        const couponField = document.getElementById('coupon-field');
+        let isDiscounted = false;
+
+        applyBtn.addEventListener('click', function () {
+            if(couponField.value === 'DISC30'){
+                if(!isDiscounted){
+                    isDiscounted = true;
+                    const discountPrice = (Number(totalPriceElm.innerText) / 100) * 70;
+                    totalPriceElm.innerText = discountPrice
+                }else{
+                    alert('You Have Already Apply This coupon')
+                }
+            }else if(couponField.value === ''){
+                alert('Please Enter coupon!')
+            }else{
+                alert('Invalid coupon!')
+            }
+        })
+    </script>
+</body>
+
+</html>

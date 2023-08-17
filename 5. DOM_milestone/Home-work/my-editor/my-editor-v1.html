@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Text Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            
+            .container{
+                background-color: rgb(105, 157, 199);
+                max-width: 1000px;
+                padding: 2rem;
+                border-radius: 10px;
+                margin: auto;
+            }
+            .menu-bar, .flex{
+                display: flex;
+                justify-content: space-between;
+            }
+            .editor-div{
+                margin-top: 1rem;
+            }
+            .editor-div::before{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 5px;
+                background-color: lightcyan;
+            }
+            .flex{
+                width: 6rem;
+            }
+            i {
+                cursor: pointer;
+                width: 1rem;
+                height: 1rem;
+                padding: 10px;
+                border-radius: 8px;
+                margin: 0px 2px;
+                /* background-color: red; */
+            }
+            h1{
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            .editor-field{
+                width: 100%;
+                height: 400px;
+                margin: 1rem 0;
+                resize: none;
+                padding: 1rem;
+                font-size: 17px;
+                box-sizing: border-box;
+            }
+            .font-size-inp{
+                width: 2.5rem;
+                padding-left: 10px;
+                background: transparent;
+                border: none;
+                outline: none;
+                font-size: 18px;
+            }
+
+            .increase-font{
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+            .right{
+                width: 9rem;
+            }
+        </style>
+</head>
+<body>
+    <main class="container">
+        <div>
+            <h1>My Text Editor</h1>
+            <div id="menu-bar" class="menu-bar">
+                <div class="flex">
+                    <i id="bold" class="fa-solid fa-bold"></i>
+                    <i id="italic" class="fa-solid fa-italic"></i>
+                    <i id="underline" class="fa-solid fa-underline"></i>
+                </div>
+                <div class="flex">
+                    <i id="align-left" class="fa-solid fa-align-left"></i>
+                    <i id="align-center" class="fa-solid fa-align-center"></i>
+                    <i id="align-right" class="fa-solid fa-align-right"></i>
+                    <i id="align-justify" class="fa-solid fa-align-justify"></i>
+                </div>
+                <div class="flex right">
+                    <input class="font-size-inp" type="number" name="" id="font-size" value="17">
+                    <span class="increase-font">aA</span>
+                    <input class="color-palate" type="color" name="" id="color">
+                </div>
+            </div>
+            
+            <div class="editor-div">
+                <textarea class="editor-field" name="" id="textarea-field" cols="30" rows="25"></textarea>
+            </div>
+        </div>
+    </main>
+    <script src="myEditor.js"></script>
+</body>
+</html>

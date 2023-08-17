@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodelist vs HTML collection</title>
+</head>
+<body>
+    <ul id="list-order">
+        <li id="list-item-1">lorem 1</li>
+        <li id="list-item-2">lorem 2</li>
+        <li id="list-item-3">lorem 3</li>
+        <li id="list-item-4">lorem 4</li>
+    </ul>
+    <script>
+        const nodeList = document.querySelectorAll('#list-order')
+        const htmlCollection = document.getElementsByTagName('ul')
+        nodeList.forEach(node=>{
+            console.log(node.nodeName);
+        })
+        
+        for(const element of htmlCollection){
+            console.log(element.nodeName);
+        }
+    </script>
+</body>
+</html>

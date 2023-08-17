@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Vs childNodes</title>
+</head>
+<body id="body">
+    <!-- this is header -->
+    <h1>Main Heading</h1>
+    <header>
+        <h1>I am heading</h1>
+    </header>
+    <!-- this is main section -->
+    <main>
+        <section></section>
+    </main>
+    <footer></footer>
+
+    <script>
+        const body = document.getElementById('body')
+        const childNodes = body.childNodes;
+        const children = body.children;
+        // console.log(children);
+        // for(const child of children){
+        //     console.log(child);
+        // }
+    </script>
+</body>
+</html>

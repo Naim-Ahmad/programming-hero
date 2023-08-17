@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Dance</title>
+    <style>
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+        }
+        #dance-btn{
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="body">
+    <header></header>
+    <main>
+        <div id="ground">
+        
+        </div>
+        
+        <button onclick="dance(this)" id="dance-btn">Let's Dance</button>
+    </main>
+
+    <script>
+        let element;
+        function dance(target){
+           element =  target
+            target.style.display = 'none'
+            const ground = document.getElementById('ground');
+            const img = document.createElement('img');
+            img.src = 'dance.gif';
+            ground.appendChild(img)
+            const audio = document.createElement('audio')
+            audio.src = 'euphoric-electric-groove-160306.mp3'
+            img.setAttribute('id', 'dancer')
+            audio.play()
+            const h2 = document.createElement('h2');
+            h2.innerText = 'For stopping the dance click the dancer boy'
+            h2.style.textAlign = 'center'
+
+           document.querySelector('header').appendChild(h2)
+
+           img.onclick = function(){
+            console.log('clicked');
+            audio.pause()
+            audio.currentTime = 0;
+            h2.style.display = 'none'
+            img.style.display = 'none'
+            element.style.display = 'inline'
+
+           }
+
+        }
+    </script>
+</body>
+</html>

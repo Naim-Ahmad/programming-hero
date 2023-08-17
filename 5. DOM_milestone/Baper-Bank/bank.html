@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Inside</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="max-w-[1100px] mx-auto px-10">
+    <header class="my-16">
+        <h1 class="text-3xl text-center font-bold">Let's get some <span class="text-sky-500">Moooooooney!!</span></h1>
+    </header>
+    <main>
+        <section>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="card bg-slate-600 text-primary-content">
+                    <div class="card-body text-center">
+                        <h2 class="text-3xl font-bold">Deposit</h2>
+                        <p class="text-5xl font-semibold">$<span id="display-deposit">00</span></p>
+                    </div>
+                </div>
+                <div class="card bg-sky-600 text-primary-content">
+                    <div class="card-body text-center">
+                        <h2 class="text-3xl font-bold">Withdraw</h2>
+                        <p class="text-5xl font-semibold">$ <span id="display-withdraw">00</span></p>
+                    </div>
+                </div>
+                <div class="card bg-lime-700 text-primary-content">
+                    <div class="card-body text-center">
+                        <h2 class="text-3xl font-bold">Balance</h2>
+                        <p class="text-5xl font-semibold">$<span id="display-balance">1240</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="card bg-amber-900 text-primary-content">
+                    <div class="card-body text-center">
+                        <h2 class="text-3xl font-bold">Deposit</h2>
+                        <input id="inp-deposit" class="bg-gray-50 mx-auto w-3/4 border my-3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-amber-700 dark:border-gray-600 dark:placeholder-slate-300 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="number" name="" id="" placeholder="$ Enter amount you want to deposit">
+                        <button id="btn-deposit" class="btn mx-auto btn-accent w-1/2">Deposit</button>
+                    </div>
+                </div>
+
+                <div class="card bg-slate-600 text-primary-content">
+                    <div class="card-body text-center">
+                        <h2 class="text-3xl font-bold">Withdraw</h2>
+                        <input
+                            class="bg-gray-50 mx-auto w-3/4 border my-3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            type="number" name="" id="inp-withdraw" placeholder="$ Enter amount you want to Withdraw">
+                        <button id="btn-withdraw" class="btn mx-auto btn-accent w-1/2">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+</body>
+</html>

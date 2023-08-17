@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add list by javaScript</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        const ul = document.querySelector('ul');
+        console.log(ul);
+        const li1 = document.createElement('li');
+        li1.innerText = 'Apple 🍎'
+        ul.appendChild(li1)
+
+        const li2 = document.createElement('li')
+        li2.innerText = 'Banana 🍌'
+        ul.appendChild(li2)
+        const li3 = document.createElement('li')
+        li3.innerText = 'Grapes 🍇'
+        ul.appendChild(li3)
+    </script>
+</body>
+</html>

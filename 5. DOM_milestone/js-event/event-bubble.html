@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble</title>
+    <style>
+        *{
+            border: 2px solid tomato;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <h1>Learn Event Bubble</h1>
+    <section id="section">
+        <ul id="list-group">
+            <li id="list-item-1">list-item-1</li>
+            <li id="list-item-2">list-item-2</li>
+            <li id="list-item-3">list-item-3</li>
+            <li id="list-item-4">list-item-4</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('body').addEventListener('click', function(){
+            console.log('body');
+        })
+        document.getElementById('section').addEventListener('click', function(){
+            console.log('Section element');
+        })
+        document.getElementById('list-group').addEventListener('click', function(){
+            console.log('List group');
+        })
+        document.getElementById('list-item-2').addEventListener('click', function(event){
+            console.log('list item 2');
+            // event.stopPropagation()
+            event.stopImmediatePropagation()
+
+        })
+        document.getElementById('list-item-2').addEventListener('click', function(event){
+            console.log('list item 4 second event');
+        })
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover vs mouseenter and mouseleave vs mouseout</title>
+</head>
+<style>
+
+    .gray{
+        width: 500px;
+        height: 500px;
+        background-color: slategray;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .blue{
+        width: 300px;
+        height: 300px;
+        background-color: slateblue;
+    }
+</style>
+<body>
+    <div class="gray">
+        <div class="blue"></div>
+    </div>
+
+    <script>
+        const gray = document.querySelector('.gray')
+        gray.addEventListener('mouseenter', function(){
+            console.log('mouse enter event fire in gray div');
+        })
+
+        gray.addEventListener('mouseleave', function(){
+            console.log('mouse leave event fire in gray div');
+        })
+
+        const blue = document.querySelector('.blue')
+        blue.addEventListener('mouseenter', function(){
+            console.log('mouse enter event fire in blue div');
+            
+        })
+        blue.addEventListener('mouseleave', function(){
+            console.log('mouse leave event fire in blue div');
+        })
+
+        gray.addEventListener('mouseover', function(){
+            console.log('mouse over event fire in gray div');
+        })
+    </script>
+</body>
+</html>

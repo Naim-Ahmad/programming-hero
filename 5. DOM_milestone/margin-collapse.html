@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Collapse</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .green{
+        height: 200px;
+        background-color: green;
+        /* padding-top: .05px; */
+        /* display: flex; */
+        /* display: grid; */
+        display: flow-root;
+    }
+    .red{
+        /* height: 50px; */
+        background-color: red;
+        margin-top: 50px;
+    }
+</style>
+<body>
+    <div class="green">
+        <h1 class="red">Hello</h1>
+    </div>
+</body>
+</html>

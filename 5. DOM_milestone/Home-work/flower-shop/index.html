@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="max-width=device-max-width, initial-scale=1.0" />
+    <title>Flower Shope</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Flower Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <h1 class="text-center">Our Products</h1>
+            <div class="products-container">
+                <div class="card" style="max-width: 18rem;">
+                    <img src="images/pngwing 5.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 id="product-name" class="card-title">Rose</h5>
+                        <p id="product-price" class="fw-bold">Price: $10</p>
+                        <button class="btn btn-primary">Add to card</button>
+                    </div>
+                </div>
+                <div class="card" style="max-width: 18rem;">
+                    <img height="290rem" src="images/pngwing 7.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 id="product-name" class="card-title">Sun Flower</h5>
+                        <p id="product-price" class="fw-bold">Price: $20</p>
+                        <button class="btn btn-primary">Add to card</button>
+                    </div>
+                </div>
+                <div class="card" style="max-width: 18rem;">
+                    <img height="290rem" src="images/pngwing 8.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 id="product-name" class="card-title">Black snow</h5>
+                        <p id="product-price" class="fw-bold">Price: $30</p>
+                        <button class="btn btn-primary">Add to card</button>
+                    </div>
+                </div>
+                <div class="card" style="max-width: 18rem;">
+                    <img src="images/pngwing 5.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 id="product-name" class="card-title">China Rose</h5>
+                        <p id="product-price" class="fw-bold">Price: $40</p>
+                        <button class="btn btn-primary">Add to card</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container w-100  w-md-50">
+            <h2 class="text-center">Your Card Details</h1>
+            <div>
+                <h3>Products List</h3>
+                <ul id="product-list-container" class="list-group mb-5">
+                    <li class="list-group-item product-info fw-bold">
+                        <span id="product-name">Name</span>
+                        <span>Quantity</span>
+                        <span >Price</span>
+                    </li>
+                    <li id="no-item" class="list-group-item text-center">No Items Here</li>
+                    <li class="list-group-item product-info d-none">
+                        <span id="product-name"></span>
+                        <input class="form-control" type="text" id="product-quantity" value="1"/>
+                        <span id="product-price">0</span>
+                    </li>
+                </ul>
+                <div class="discount">
+                    <h2>Total Price: <span id="total">0</span></h2>
+                    <small>For 30% Discount apply coupon code</small>
+                    <p>Coupon <input class="form-control coupon" type="text" name="" id="coupon"> <button id="apply-btn" class="btn btn-outline-primary">Apply</button></p>
+                </div>
+                <button class="btn btn-primary">Pay Now</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

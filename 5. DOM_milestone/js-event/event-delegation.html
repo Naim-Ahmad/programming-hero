@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+    <h1>Event Delegation in JavaScript DOM</h1>
+    <ul id="list-container">
+        <li id="list">Lorem, ipsum dolor.</li>
+        <li id="list">Soluta, voluptates odio?</li>
+        <li id="list">Dolor, repudiandae nam!</li>
+        <li id="list">Eaque, consequuntur minima!</li>
+    </ul>
+    <button id="add-item">Add New Item</button>
+    <script>
+        const listContainer = document.getElementById('list-container')
+        const addItemBtn = document.getElementById('add-item')
+        const lists = listContainer.children;
+
+        // event delegation problem
+        // for(const list of lists){
+        //     list.addEventListener('click', function(event){
+        //         // list.parentNode.removeChild(event.target)
+        //         event.target.remove()
+        //     })
+        // }
+
+        // Event delegation solution
+        listContainer.addEventListener('click', function(event){
+            // event.target.remove()
+            // event.target.parentNode.removeChild(event.target)
+
+            // I can check the node has in this paren or not
+            if(listContainer.contains(event.target)){
+                event.target.remove()
+            }
+        })
+        addItemBtn.addEventListener('click', function(event){
+            const li = document.createElement('li')
+            li.innerText = 'Added new item'
+            listContainer.append(li)
+        })
+
+        // event delegation solution
+        addItemBtn.addEventListener('click', function(event){
+
+        })
+    </script>
+</body>
+</html>
