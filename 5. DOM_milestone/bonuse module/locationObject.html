@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Object in js</title>
+    <style>
+        body{
+            font-size: 20px;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .flex-center{
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            padding: 8px 15px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Explore Location Object</h1>
+    </header>
+    <main class="flex-center">
+        <section>
+            <p>Host: <span id="host"> </span></p>
+            <p>Host Name: <span id="host-name"> </span></p>
+            <p>href: <span id="href"> </span></p>
+            <p>origin: <span id="origin"> </span></p>
+            <p>pathname: <span id="pathname"> </span></p>
+            <p>port: <span id="port"></span></p>
+            <p>protocol: <span id="protocol"></span></p>
+            <section>
+                <button onclick="reload()">Reload</button>
+                <button onclick="replace()">Replace</button>
+                <button onclick="assign()">Assign</button>
+            </section>
+        </section>
+    </main>
+   <script>
+        document.getElementById('host').innerText = location.host;
+        document.getElementById('host-name').innerText = location.hostname;
+        document.getElementById('href').innerText = location.href;
+        document.getElementById('origin').innerText = location.origin;
+        document.getElementById('pathname').innerText = location.pathname;
+        document.getElementById('port').innerText = location.port;
+        document.getElementById('protocol').innerText = location.protocol;
+         function reload() {
+                console.log('clicked');
+                location.reload()
+            }
+        function replace(){
+            location.replace('https://www.google.com')
+        }
+        function assign(){
+            location.assign('https://www.google.com')
+        }
+   </script>
+</body>
+</html>

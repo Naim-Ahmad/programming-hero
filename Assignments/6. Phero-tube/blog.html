@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog of Naim Ahmad</title>
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="max-w-[900px] mx-auto px-4 sm:px-10 mt-6">
+        
+        <h1 class="text-4xl font-extrabold">Difference between var, let, const. nul vs undefined. Rest API</h1>
+        <div class="flex mt-6">
+            <figure class="me-4">
+                <img class="rounded-full w-16" src="images/naimahmad.jpeg" alt="">
+            </figure>
+            <div>
+                <p>Naim ahmad</p>
+                <p class="text-lg">Published: <time datetime="2023-09-1">1-Sep-2023</time></p>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-[900px] mx-auto mt-6 px-4 sm:px-10">
+        <div class="divider"></div>
+        <article>
+            <section>
+                <h2 class="text-3xl font-semibold">var, let, const এর মধ্যে পার্থক্য</h2>
+                <p class="text-lg" id="let-var-const">
+                    
+                </p>
+            </section>
+            <div class="divider"></div>
+            <section class="">
+                <h2 class="text-3xl font-semibold">null vs undefined</h2>
+                <p class="text-lg" id="null-undefined"></p>
+            </section>
+            <div class="divider"></div>
+            <section class="pb-8">
+                <h2 class="text-3xl font-semibold">API (application programming interface)</h2>
+                <p class="text-lg" id="api"></p>
+            </section>
+        </article>
+    </main>
+
+    <script>
+        document.getElementById('let-var-const').innerText = `
+            JavaScript এ execution context এ ৩ ধরনের স্কোপ তৈরি হয় ।
+            ১- গ্লোবাল স্কোপ 
+            ২- ফাংশন স্কোপ 
+            ৩- ব্লক স্কোপ 
+            var হল ফাংশন স্কোপ অর্থাৎ এটা যেই ফাংশন এর মধ্যে ডিক্লিয়ার করা হবে সেই ফাংশনের মধ্যেয় সুধু মাত্র সেটা অ্যাক্সেস করা যাবে function এর বাহিরে সেটা অ্যাক্সেস করা যাবে না যেমন । 
+
+            function funcScope() {
+            var test = 'test'
+            }
+            console.log(test)
+
+            এই কোড আপনাকে error দিবে কারণ সে টেস্ট নামে কোন ভ্যারিয়েবল খুঁজে পায় নি। যেহেতু var keyword টি একটি ফাংশন বডির মধ্যে আছে। তবে যদি কোন ব্লক স্কোপে var ডিক্লিয়ার করা হয় তাহলে সেটা সেই ব্লক এর বাহিরে অ্যাক্সেস করা যাবে যেমন। 
+            if(true){
+                var ifBlock = 'if block'
+            }
+            console.log(ifBlock)
+
+            আপনি আউটপুট if block' দেখতে পারবেন যদিও সেটা ব্লক এর বাহিরে আছে। 
+            এবং var এর একটা বিশিষ্ট হল সেটাকে আপনি redeclare করতে পারবেন আপনাকে কোন এরর দেবে না তবে আগের ভালু পরের টা দ্বারা রিপ্লেস হয়ে যাবে। তবে যদি ভারিয়াবল var ছাড়া লেখা হয় তখন সেটা গ্লোবাল ভারিয়াবল হয়ে যায় এবং সেটা পুরা অ্যাপ্লিকেশান এর সমস্থ জায়গা থেকে অ্যাক্সেস করা যাবে। 
+
+            let এবং const হল ব্লক স্কোপ অর্থাৎ সেটা ব্লক function body হক বা if ব্লক সহ যে কোন ব্লক এর মধ্যে ডিক্লিয়ার করা হলে ব্লক এর বাহিরে সেটাকে অ্যাক্সেস করা যাবে না। উপরের কোডের var কে যদি let দারা পরিবর্তন করে দেন তাহলে এরর দিবে। কারণ এই গুলো ব্লক স্কোপ যেটা ব্লক এর বাহির থেকে অ্যাক্সেস করা যাবে না। 
+
+            এছাড়া let এবং const এর মধ্যে পার্থক্য হল let কে re-declare করতে পারবেন না তবে Reassign করতে পারবেন । আর const কে আপনি re-declare এবং reassign কোন টা করতে পারবেন না। 
+        `
+
+        document.getElementById('null-undefined').innerText = `
+        null বোঝায়  সেখানে ভালু নেই undefined বলে ভালু আছে কিন্তু সেটা এখনো defined করা হয় নাই  
+
+        null এর কিছু use case
+        ১- তুমি ভারিয়াবল ডিক্লিয়ার করেছ কিন্তু অবজেক্ট বা ভালু পরে আসবে সেই ক্ষেত্রে তুমি null ইউজ করতে পার। যেমন 
+
+        let data = null;
+        data = { name: 'John', age: 30 };
+
+        ২- ভ্যালু রিসেট এবং ক্লিয়ার করতে null ব্যবহার করা হয়। যেমন। 
+
+        let someValue = 42;
+        someValue = null;
+
+        undefined এর অনেক যায়গা আছে তার মধ্যে এখানে কয়েকটি দেওয়া হল 
+
+        ১- 
+
+        let someValue;
+        console.log(someValue)
+
+        ২- 
+
+        function greet(name) {
+        console.log('Hello', name );
+        }
+
+        greet()
+
+        ৩- 
+
+        const person = {
+        name: ‘naim',
+        age: 30
+        };
+
+        console.log(person.address);
+
+        ৪- 
+
+        function doSomething() {
+        // No return statement
+        }
+
+        const result = doSomething();
+        console.log(result);
+        `
+
+        document.getElementById('api').innerText = `
+        Client সার্ভার এর সাথে communicate করে API এর মাধ্যমে ইউজার এর কোন ডাটা এর জন্য প্রয়োজন হলে সে সার্ভারে রিকুয়েস্ট করে এবং সার্ভার তাকে ডাটা দিয়ে দেয়। যেমন ধরা যাক রেস্টুরেন্ট এ একজন ওয়েটার থাকে তাকে কোন অর্ডার করলে সে সে খাবার প্রসেস করে নিয়ে আসে।  
+        `
+    </script>
+</body>
+</html>

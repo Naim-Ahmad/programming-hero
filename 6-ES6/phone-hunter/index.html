@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main class="max-w-[1200px] mx-auto px-28">
+        <div class="text-center my-5">
+            <h1 class="text-3xl font-bold my-5">Search your phone</h1>
+            <input id="search-field" type="text" placeholder="Search here" class="input input-bordered w-full max-w-xs" />
+            <button class="btn btn-primary" onclick="searchHandler()">Search</button>
+        </div>
+        <section>
+            <div id="loading" class="text-center my-36 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+            <div id="no-data-found" class="text-center mt-32 hidden">
+                <p class="text-3xl font-bold">No Data Found</p>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">             
+            </div>
+            <div id="show-all" class="text-center mt-6 hidden"><button class="btn btn-primary" onclick="showAllHandler()">Show All</button></div>
+        </section>
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            
+            <dialog id="showDetailsModal" class="modal">
+                <form method="dialog" class="modal-box">
+                    <figure class="p-10 pt-10 bg-gray-200">
+                        <img id="details-image" src="" class="mx-auto rounded-xl" />
+                    </figure>
+                    <h3 id="details-name" class="font-bold text-3xl my-6"></h3>
+                    <!-- <p class="py-4">Press ESC key or click the button below to close</p> -->
+                    <ul class="leading-10" id="details-list">
+
+                    </ul>
+                    <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
