@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wtitleth=device-wtitleth, initial-scale=1.0">
+    <title>Explore CreateAttribute and setAttribute method</title>
+    <style>
+        .para1{
+            background-color: aliceblue;
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>createAttribute(), and setAttribute()</h1>
+    </header>
+    <main>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorem reprehenderit deleniti veniam neque at tenetur quasi sint eaque tempora aperiam enim magni officia animi deserunt illo ad consectetur dignissimos illum cuptitleitate aliquam, tempore vitae magnam iste. Natus quaerat, ut, nam ullam ipsum quia dolorem esse error velit eos reiciendis dicta facilis iste possimus facere assumenda perferendis nisi tenetur porro explicabo doloribus corporis title. Praesentium, adipisci minus assumenda deleniti, commodi officiis hic officia reiciendis saepe pariatur voluptatibus culpa illo autem fugit ipsa provtitleent rem eaque dignissimos sed consequuntur fugiat dolorum. Magni nihil cumque molestias corporis hic nesciunt aperiam optio non.</p>
+        </section>
+    </main>
+    <script>
+        const p = document.querySelector('p');
+        // if you want to direct add attribute so you can use set Attribute method
+        p.setAttribute('class', 'para1')
+        // if you want to independent create attribute and latter you set value so you can use this method
+        const title = document.createAttribute('title')
+        title.value = 'I am a title'
+        p.setAttributeNode(title)
+        console.log(title);
+
+        const id = document.createAttribute('id');
+        id.value = 'description'
+        p.setAttributeNode(id)
+        const description = document.getElementById('description')
+        console.log(description);
+
+    </script>
+</body>
+</html>

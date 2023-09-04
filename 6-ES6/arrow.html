@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <h1>arrow function</h1>
+    <script>
+        const obj = {
+            name: 'naim',
+            age: 24,
+            print: function(){
+                function print2(){
+                    console.log(this);
+                }
+                print2()
+            }
+        }
+        obj.print()
+    </script>
+</body>
+</html>
