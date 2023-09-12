@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "cover_img": "https://i.ibb.co/JBL5JgX/Rectangle-1.png",
+    "author_img": "https://i.ibb.co/Hr6KbSK/Ellipse-1.png",
+    "author_name": "John Doe",
+    "published_date": "Mar 14 (4 Days ago)",
+    "reading_time": "10 minutes",
+    "title": "The Art of Fiction Writing",
+    "tags": ["Writing", "Fiction"]
+  },
+  {
+    "id": 2,
+    "cover_img": "https://i.ibb.co/DCWwr4v/Rectangle-2.png",
+    "author_img": "https://i.ibb.co/P9zMrt1/Ellipse-2.png",
+    "author_name": "Jane Smith",
+    "published_date": "Feb 28 (19 Days ago)",
+    "reading_time": "8 minutes",
+    "title": "A Guide to Effective Communication",
+    "tags": ["Communication", "Skills"]
+  },
+  {
+    "id": 3,
+    "cover_img": "https://i.ibb.co/wWjwtKX/Rectangle-3.png",
+    "author_img": "https://i.ibb.co/wchCGbC/Ellipse-3.png",
+    "author_name": "Alice Johnson",
+    "published_date": "Jan 15 (63 Days ago)",
+    "reading_time": "15 minutes",
+    "title": "Exploring the Wonders of Nature",
+    "tags": ["Nature", "Exploration"]
+  }
+]

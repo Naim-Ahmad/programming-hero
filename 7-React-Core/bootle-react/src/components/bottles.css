@@ -1,0 +1,13 @@
+.box {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid tomato;
+}
+.box img {
+  width: 200px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
