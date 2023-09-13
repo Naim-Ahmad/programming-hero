@@ -1,0 +1,50 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: url('https://i.ibb.co/JB1y0X5/4690.jpg'),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  border-radius: 8px;
+  /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); */
+  border: 2px solid rgba(200, 200, 200, 0.3);
+  padding: 1rem;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-section {
+  width: 70%;
+}
+
+.select-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  outline: 0;
+  border: 0;
+  background-color: slateblue;
+  color: white;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  gap: 3rem;
+}
