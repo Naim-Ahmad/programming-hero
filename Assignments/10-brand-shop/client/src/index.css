@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active, .pending {
+    color:  rgb(34 197 94)!important;
+    font-weight: bold;
+    background: none !important;
+}
+
+.swiper-slide{
+    background: none !important;
+}
+
+.swiper-slide .d-image{
+    max-height: 15rem;
+    min-height: 15rem;
+}
