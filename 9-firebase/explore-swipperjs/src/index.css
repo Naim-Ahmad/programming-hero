@@ -1,0 +1,9 @@
+.slide_div {
+  border: 4px solid tomato;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+}

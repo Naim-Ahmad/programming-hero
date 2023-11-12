@@ -21,7 +21,7 @@ function CoffeeCard({ coffee, coffees, setCoffees }) {
           }).then((result) => {
               if (result.isConfirmed) {
                   
-                fetch(`http://localhost:5000/coffee/${id}`, {
+                fetch(`https://server-indol-iota.vercel.app/coffee/${id}`, {
                     method: 'delete'
                 })
                     .then(res => res.json())

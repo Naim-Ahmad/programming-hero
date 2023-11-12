@@ -1,6 +1,6 @@
-import { useState } from "react"
-import { useLoaderData } from "react-router-dom"
-import CoffeeCard from "./CoffeeCard"
+import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import CoffeeCard from "./CoffeeCard";
 
 
 export default function Products() {

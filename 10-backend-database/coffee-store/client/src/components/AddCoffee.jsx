@@ -20,7 +20,7 @@ export default function AddCoffee() {
         const coffeeData = {name, chef, supplier, taste, details, category, photo, price}
 
         // send data to server
-        fetch('http://localhost:5000/coffee', {
+        fetch('https://server-indol-iota.vercel.app/coffee', {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
