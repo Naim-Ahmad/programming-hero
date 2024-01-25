@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "title": "Exciting Adventure",
+      "description": "Join us on an thrilling journey through uncharted territories!",
+      "like_count": 110
+    },
+    {
+      "title": "Gourmet Delights",
+      "description": "Explore the world of culinary delights with our exclusive recipes!",
+      "like_count": 75
+    },
+    {
+      "title": "Tech Innovations",
+      "description": "Discover the latest in technology and innovation that will change the way we live.",
+      "like_count": 130
+    },
+    {
+      "title": "Fitness Challenge",
+      "description": "Embark on a fitness journey to transform your body and mind!",
+      "like_count": 90
+    },
+    {
+      "title": "Artistic Creations",
+      "description": "Immerse yourself in the beauty of art with our curated collection of masterpieces.",
+      "like_count": 58
+    },
+    {
+      "title": "Music Vibes",
+      "description": "Experience the magic of music with our handpicked playlists for every mood.",
+      "like_count": 112
+    }
+  ]
+}

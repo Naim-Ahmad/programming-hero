@@ -48,8 +48,8 @@ export default function AuthProvider({ children }) {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
+      setLoading(false);
       if(user){
-        setLoading(false);
         axios.post('http://localhost:5000/jwt', {email: user.email}, {withCredentials: true})
         .then(res=> {
           console.log(res.data)
@@ -58,7 +58,6 @@ export default function AuthProvider({ children }) {
           console.log(err)
         })
       }else{
-        setLoading(true)
         axios.get('http://localhost:5000/logout', {withCredentials: true})
         .then(res=> {
           console.log(res.data)

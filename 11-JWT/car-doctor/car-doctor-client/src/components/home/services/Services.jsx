@@ -1,9 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link, useLoaderData } from "react-router-dom";
 
 export default function Services() {
-  const services = useLoaderData() || [];
+  const loadedServices = useLoaderData() || [];
+
+  const [services, setServices] = useState(loadedServices);
+
+  const handleSort = (e) => {
+    const value = e.target.value;
+    fetch(`http://localhost:5000/services?sort=${value}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setServices(data);
+        console.log(data);
+      });
+  };
 
   return (
     <div>
@@ -37,7 +50,18 @@ export default function Services() {
           </div>
         ))}
       </div>
-      <div className="text-center py-10">
+      <div className="flex justify-between py-10">
+        <div>
+          <select
+            onChange={handleSort}
+            name="sortByPrice"
+            className="select select-bordered w-full max-w-xs"
+          >
+            <option value="default">Price Default</option>
+            <option value="ascending">Price (Low to heigh)</option>
+            <option value="descending">Price (heigh to low)</option>
+          </select>
+        </div>
         <Link to="/servicesDetails" className="btn btn-outline btn-error">
           Show More Services
         </Link>
